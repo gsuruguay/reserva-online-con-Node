@@ -38,6 +38,11 @@ a{
   background-color: rgba(98, 115, 122, 0.425);
 }
 
+.tdHover:hover{
+  background-color: rgba(89, 116, 129, 0.726);
+  cursor: pointer;
+}
+
 /*Seccion Horarios disponibles*/
 #horaDisponibles th, td {
   padding: 8px;

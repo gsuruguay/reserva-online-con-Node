@@ -85,15 +85,16 @@ function escribirCalendario(fecha, nombreDias, diaComienzo, dias) {
 
       tds[i].innerHTML = contador;
 
+      /**Agrego clase css a cada td */
+      tds[i].classList.add("tdHover");
+
       /*Funcion click para seleccionar dia de reserva*/
       tds[i].addEventListener("click", function(){
         const mesSeleccionado = document.getElementById("fechaActual").innerHTML;
         let mesEnNro;
         let anioSolo = mesSeleccionado.slice(mesSeleccionado.lastIndexOf(" ")+1);
         let fechaFormateada;
-        //alert(i-8);
         const diaSeleccionado = i-8;
-        //alert(diaSeleccionado + " de " + mesSeleccionado);
         const mesesDelAnio = ["inicial","Enero","Febrero","Marzo", "Abril", "Mayo", "Junio", "Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"];
         for(let i=0; i<= mesesDelAnio.length; i++){
           if(mesSeleccionado.slice(0, mesSeleccionado.indexOf(" ")) === mesesDelAnio[i]){
@@ -112,8 +113,8 @@ function escribirCalendario(fecha, nombreDias, diaComienzo, dias) {
 
       /** Estilo al dia actual de color rojo*/
       if (fecha.getDate() == contador) {
-        tds[i].style.color = "red";
-        tds[i].style.backgroundColor = "rgb(34, 73, 90);";
+        tds[i].style.color = "white";
+        tds[i].style.backgroundColor = "rgb(34, 73, 90)";
       }
       contador++;
     }

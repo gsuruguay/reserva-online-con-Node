@@ -1,6 +1,7 @@
 const express = require("express");
 const path = require("path");
 const expHbs = require("express-handlebars");
+const nodemailer = require("nodemailer");
 const utils = require("./utils");
 const app = express();
 const PUERTO = 3456;
@@ -130,8 +131,47 @@ app.post("/confirmacionReserva", (req, res) => {
     horaTurno: req.body.hora,
     telefono: req.body.telefono,
     email: req.body.email,
+    tratamiento: req.body.tratamiento,
     comentario: req.body.comentario
   }
+
+  /*Envio de email de la cita reservada*/
+  let transporter = nodemailer.createTransport({
+    host: "smtp.gmail.com",
+    port: 465,
+    secure: true, // true for 465, false for other ports
+    auth: {
+      user: "keiracony@gmail.com", // user
+      pass: "qhrmxqcsjhlvcedq", // password
+    },
+  });
+
+  let mailOptions = {
+    from: 'Estetica Pilar Studio', // sender address
+    to: "guillermo.suruguay@gmail.com", // list of receivers
+    subject: "Nueva reserva online de Estética", // Subject line
+    //text: "Enviando msj desde nodemailer", // plain text body
+    html: `    
+    <h3>Nueva cita reservada online</h3>
+    <b>NOMBRE:</b> ${req.body.nombre} <br>
+    <b>FECHA DE TURNO:</b> ${req.body.fecha} <br>
+    <b>HORA DEL TURNO:</b> ${req.body.hora} <br>
+    <b>TELEFONO:</b> ${req.body.telefono}<br>
+    <b>EMAIL:</b> ${req.body.email}<br>
+    <b>TRATAMIENTO:</b> ${req.body.tratamiento}<br>
+    <b>COMENTARIO:</b> ${req.body.comentario}
+    `, // html body   
+
+  };
+  transporter.sendMail(mailOptions, (error, info) => {
+    if (error) {
+      res.status(500).send(error.message);
+    } else {
+      console.log("Email enviado");
+      res.status(200).jsonp(req.body)
+    }
+  });
+  /******************* */
 
   dbReservas.insertarReserva(
     newReserva,
@@ -147,6 +187,7 @@ app.post("/confirmacionReserva", (req, res) => {
         hora: req.body.hora,
         telefono: req.body.telefono,
         email: req.body.email,
+        tratamiento: req.body.tratamiento,
         comentario: req.body.comentario
       });
     }
@@ -154,5 +195,5 @@ app.post("/confirmacionReserva", (req, res) => {
 })
 
 app.listen(PUERTO, () => {
-  console.log(`Escuchando en puerto ${PUERTO}`);
-})
+    console.log(`Escuchando en puerto ${PUERTO}`);
+  })

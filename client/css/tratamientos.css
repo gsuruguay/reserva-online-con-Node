@@ -1,0 +1,200 @@
+#navbar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1040;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+#logoNav{
+    width: 150px;
+    margin-left: 20px;
+}
+.txtBeige{
+    color: beige;
+}
+.navbar-light .navbar-brand{
+    color: rgb(34, 73, 90);
+} 
+.navbar-light .navbar-nav .nav-link.active{
+    color: rgb(34, 73, 90);
+    font-weight: bolder;
+}
+.nav-item{
+    transition: all 0.5s ease;
+}
+.nav-item:hover{
+        border-radius: 20px;
+        background-color:rgba(219, 193, 177, 0.795);
+}
+body{
+    color: rgb(34, 73, 90);
+}
+/*Boton de Wp*/
+.bntWp{
+    width: fit-content;
+    left: unset;
+}
+.bntWp img{
+    width: 80px;
+    filter: drop-shadow(0 2px 5px rgba(12, 1, 1, 0.87));
+    transition: all 1s ease;
+}
+.bntWp img:hover{
+    width: 83px;
+    filter: drop-shadow(0 2px 5px rgba(255, 255, 255, 0.87));
+    transform: scale(1.2);
+}
+
+/*Nav de Reserva*/
+#navReserva{
+    height: 45px;
+    font-size: bolder;
+    font-size: 1.3rem;
+    z-index: 5;
+    margin-top: 95px;
+}
+#btnNavReservas{
+    background-color:rgb(72, 101, 115);    
+}
+#btnNavReservas a{
+    color: beige;
+    transition: all 0.6s ease;
+}
+#btnNavReservas a:hover{
+    color: rgb(255, 255, 255);
+    filter: drop-shadow(0 2px 5px rgba(255, 255, 255, 0.87)); 
+}
+#divNavSeparador{
+    background-color:rgb(34, 73, 90);
+}
+#divNavRrss{
+    background-color:rgb(219, 193, 177);
+}
+#divNavRrss img{
+    margin-left: 10px;
+    padding: 3px 0px;
+    transition: all 0.6s ease;
+}
+#divNavRrss img:hover{
+    transform: scale(1.3);
+}
+#lgTel{
+    width: 12px;
+}
+#lgFace{
+    width: 10px;
+}
+#lgIg{
+    width: 18px;
+}
+
+#containerPpal{
+    margin-top: 150px;
+}
+.txtTrat{
+    width: 75%;
+    margin-left: 15%;
+}
+h1{
+    font-family: 'Architects Daughter', cursive;
+}
+.bg1{
+    background-color: rgba(245, 209, 225, 0.89);
+}
+.bg2{
+    background-color: rgba(88, 108, 117, 0.274);
+}
+
+input,
+textarea {
+width: 100%;
+}
+
+/*Footer*/
+footer{
+    color: beige;
+    background-color: rgb(34, 73, 90);
+    border: unset;
+}
+footer a{
+    color: rgb(219, 193, 177);
+    font-weight: 600;
+}
+#icoRrssCto img{
+    margin-left: 10px;
+    padding: 3px 0px;
+    transition: all 0.6s ease;
+}
+#icoRrssCto img:hover{
+    filter: drop-shadow(0 2px 5px rgba(255, 255, 255, 0.719));
+    transform: scale(1.3);
+}
+#logoFooter{
+    width: 100px;
+}
+#ftCel{
+    display: none;
+}
+
+
+@media only screen and (max-width: 992px){
+    #navReserva{
+        margin-top: -50px;
+        padding: 0;
+    }
+    .row{
+        --bs-gutter-x: 0;
+    }
+    #divNavRrss{
+        padding-right: 5px;
+        padding-bottom: 3px;
+    }
+    h1{
+        font-size: 1.9rem;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .bg3{
+        background-color: rgba(248, 240, 132, 0.712);
+    }
+}
+
+@media only screen and (max-width: 576px){
+    #containerPpal {
+        margin-top: 160px;
+    }
+    #navReserva {
+        margin-top: -57px;
+    }
+    .m-3 {
+        margin: 0.5rem!important;
+    }
+    .txtTrat{
+        width: 80%;
+        margin-left: 10%;
+    }
+    h1 {
+        font-size: 1.6rem;
+    }
+    .p-5 {
+        padding: 1rem!important;
+    }
+    footer{
+        font-size: 0.9rem;
+    }
+    footer span{
+        margin-top: 5px;
+        display: block;
+        color: rgb(145, 156, 156);
+    }
+    #ftCel{
+        display: block;
+        padding: 10px 0;
+    }
+    #ftPc{
+        display: none; 
+    }
+}

@@ -1,0 +1,25 @@
+{
+  "name": "proyectofinal-version2",
+  "version": "2.0.0",
+  "description": "Version 2",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gsuruguay/pagina-reserva-online.git"
+  },
+  "author": "Guillermo G. Suruguay",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gsuruguay/pagina-reserva-online/issues"
+  },
+  "homepage": "https://github.com/gsuruguay/pagina-reserva-online#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^5.3.2",
+    "mongodb": "^3.6.9"
+  }
+}

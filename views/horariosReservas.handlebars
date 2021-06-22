@@ -1,0 +1,110 @@
+  <div class="row">
+    <div class="col" id="calendario">
+      <table id="table">
+        <tr id="trMes">
+          <td colspan="7" id="fechaActual">sd</td>
+        </tr>
+        <tr id="trDias">
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="col" id="horaDisponibles">
+      <h4 class="text-center">Horarios Disponibles del {{fecha}} </h4>
+      <table>
+        {{#if msjErrorQuery}}
+        <h3>{{msjErrorQuery}}</h3>
+        {{else}}
+        {{#if listaConHorarios}}
+        <!-- <h2>{{tituloResultados}}</h2> -->
+        <tr>
+          <th>Hora</th>
+          <th>Disponibilidad</td>
+        </tr>
+
+        {{#each listaConHorarios}}
+        <tr>
+          <th>{{this.horaTurno}}:00</th>
+
+          {{#if this.disponible}}
+
+          <td>
+            <form action="/datosReserva" method="post">
+              <input type="hidden" name="fecha" value="{{this.fecha}}">
+              <input type="hidden" name="hora" value="{{this.horaTurno}}:00">
+
+              <input class="btn btn-primary" type="submit" value="Reservar">
+          </form>
+          </td>
+
+          {{else}}
+          <td>No disponible</td>
+          {{/if}}
+        </tr>
+        {{/each}}
+        {{/if}}
+        {{/if}}
+      </table>
+    </div>
+  </div>

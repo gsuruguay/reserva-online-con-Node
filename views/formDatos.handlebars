@@ -1,0 +1,122 @@
+<h3 class="text-center">Completa tus datos para la reserva</h3>
+<!-- Otro estlilo de form con label flotante
+<form class="needs-validation" novalidate>
+  <div class="form-floating mb-3">
+    <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+    <label for="floatingInput">Dirección de email</label>
+  </div>
+  <div class="form-floating">
+    <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+    <label for="floatingPassword">Password</label>
+  </div>
+  <input type="submit" class="btn btn-primary">
+</form>
+ -->
+<div class="container">
+  <form method="POST" action="/confirmacionReserva" class="row g-3 needs-validation" novalidate>
+    <div class="col-md-6">
+      <label for="fecha" class="form-label">Fecha seleccionada:</label>
+      <input class="form-control" type="text" name="fecha" value="{{fecha}}" readonly>
+    </div>
+    <div class="col-md-6">
+      <label for="hora" class="form-label">Hora seleccionada:</label>
+      <input class="form-control" type="text" name="hora" value="{{hora}}" aria-label="Disabled input" readonly>
+    </div>
+    <div class="col-md-6">
+      <label for="validationCustom01" class="form-label">Nombre Completo</label>
+      <input type="text" name="nombre" class="form-control" id="validationCustom01" minlength="3" maxlength="30" placeholder="Juana Lopez"
+        required>
+      <div class="invalid-feedback">
+        Coloque su nombre completo
+      </div>
+    </div>
+    <div class="col-md-6">
+      <label for="validationCustom02" class="form-label">Teléfono</label>
+      <input type="tel" name="telefono" class="form-control" id="validationCustom02" pattern="[\+]?[0-9]{5,20}" placeholder="3816444555"
+        required>
+      <div class="invalid-feedback">
+        Coloque un número de teléfono válido
+      </div>
+    </div>
+    <div class="col-md-6">
+      <label for="validationCustom03" class="form-label">Email</label>
+      <input type="email" name="email" class="form-control" id="validationCustom03"
+        pattern="^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$" placeholder="mail@ejemplo.com"
+        required>
+      <div class="invalid-feedback">
+        Coloque su email correctamente
+      </div>
+    </div>
+    <div class="col-md-6">
+      <label for="validationCustom04" class="form-label">Tratamiento a realizar</label>
+      <select class="form-select" name="tratamiento" id="validationCustom04" required>
+        <option selected disabled value="">Elija una opción...</option>
+        <option value="Hidrolipoclasia">Hidrolipoclasia</option>
+        <option value="Lifting">Lifting de Nariz</option>
+        <option value="Rinomodelación">Rinomodelación</option>
+        <option value="Masoterapia">Masoterapia capilar</option>
+        <option value="MesoBb">Meso bb glow</option>
+        <option value="Microblading">Microblading</option>
+        <option value="Plasma">Plasma pen</option>
+        <option value="PushUp">Push up gluteos</option>
+        <option value="Otros-tratamientos">Otros tratamientos</option>
+      </select>
+      <div class="invalid-feedback">
+        Debe seleccionar una opción.
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="comentarios" class="form-label">Comentarios</label>
+      <textarea class="form-control" name="comentario" id="comentarios" rows="3" maxlength="300"
+        placeholder="Escriba aqui..."></textarea>
+    </div>
+    <div class="col-12 m-3">
+      <button class="btn btn-primary" type="submit">Reservar</button>
+      <a href="/reserva" id="btnModificar" class="btn btn-outline-danger">Modificar día</a>
+    </div>
+  </form>
+</div>
+
+<!--
+<script>
+var oldURL = `http://localhost:3456/datosReserva?fecha={{fecha}}&hora={{hora}}`;
+console.log(oldURL)
+var currentURL = window.location.href;
+function checkURLchange(currentURL){
+    if(currentURL != oldURL){
+        alert("url changed!");
+        oldURL = currentURL;
+    }
+
+    oldURL = window.location.href;
+    setInterval(function() {
+        checkURLchange(window.location.href);
+    }, 2000);
+}
+
+checkURLchange();
+</script>
+-->
+<script>
+  (function () {
+    'use strict'
+
+    // Se obtiene todos los formularios para aplicar estilos de validación de Bootstrap personalizados
+    var forms = document.querySelectorAll('.needs-validation')
+
+    // Bucle sobre ellos y evitar la presentación
+    Array.prototype.slice.call(forms)
+      .forEach(function (form) {
+        form.addEventListener('submit', function (event) {
+          if (!form.checkValidity()) {
+            event.preventDefault()
+            event.stopPropagation()
+          }
+
+          form.classList.add('was-validated')
+        }, false)
+      })
+  })()
+
+
+</script>

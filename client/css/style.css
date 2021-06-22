@@ -1,0 +1,81 @@
+#navbar, #navReserva{
+  box-shadow: -1px 1px 14px 1px rgb(0 0 0 / 56%);
+}
+#containerPpal{
+  margin-bottom: 100px;
+}
+a{
+  text-decoration: none;
+}
+/*Cuadro del calendario*/
+#containerPpal{
+  font-family: 'Architects Daughter', cursive;
+}
+#calendario {
+  height: 400px;
+  width: 400px;
+  margin: 50px;
+  text-align: center;
+}
+#table {
+  font-size: 2rem;
+  width: 100%;
+  border: solid thin rgb(34, 73, 90);
+  border-collapse: collapse;
+}
+#horaDisponibles .btn-primary{  
+  margin-top: 0px;
+  height: 29px;
+  padding-bottom: 0px;
+  padding-top: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+#trMes{
+  font-weight: bolder;
+}
+#trDias{
+  background-color: rgba(98, 115, 122, 0.425);
+}
+
+/*Seccion Horarios disponibles*/
+#horaDisponibles th, td {
+  padding: 8px;
+}
+#horaDisponibles td{
+  width: 100%;
+}
+
+/*Datos confirmacion reserva*/
+#txtDatosReserva{
+  margin: 50px 0;
+  background-color: rgb(219, 193, 177);
+  border-radius: 30px;
+  font-size: 1rem;
+  word-wrap: break-word;
+}
+
+/*Footer*/
+footer a{
+  color: rgb(219, 193, 177);
+  font-weight: 600;
+}
+
+@media only screen and (max-width: 768px){
+  #horaDisponibles{
+    margin-top: 50px;
+  }
+}
+
+@media only screen and (max-width: 576px){
+  #calendario{
+    margin: 0;
+  }
+  #table{
+    font-size: 1.5rem;
+  }  
+  textarea {
+    height: 200px;
+    resize: none;
+  }
+}

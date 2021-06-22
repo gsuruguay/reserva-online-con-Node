@@ -1,0 +1,104 @@
+<div class="container">
+  <div class="row">
+    <div class="col" id="calendario">
+      <table id="table">
+        <tr>
+          <td colspan="7" id="fechaActual">sd</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="col" id="horaDisponibles">
+      <h1>Horarios Disponibles del {{fecha}} </h1>
+      <table>
+        {{#if msjErrorQuery}}
+        <h3>{{msjErrorQuery}}</h3>
+        {{else}}
+        {{#if listaConHorarios}}
+        <!-- <h2>{{tituloResultados}}</h2> -->
+        <tr>
+          <th>Hora</th>
+          <th>Disponibilidad</td>
+        </tr>
+
+        {{#each listaConHorarios}}
+        <tr>
+          <th>{{this.horaTurno}}:00</th>
+
+          {{#if this.disponible}}
+          <td>Disponible<a href="/datosReserva?fecha={{this.fecha}}&hora={{this.horaTurno}}:00">
+              (reservar)</a></td>
+          {{else}}
+          <td>No disponible</td>
+          {{/if}}
+        </tr>
+        {{/each}}
+        {{/if}}
+        {{/if}}
+      </table>
+    </div>
+  </div>
+</div>

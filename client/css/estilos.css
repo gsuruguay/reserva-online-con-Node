@@ -1,0 +1,569 @@
+*{
+    margin: 0px;
+}
+#navbar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1040;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+#logoNav{
+    width: 150px;
+    margin-left: 20px;
+}
+.txtBeige{
+    color: beige;
+}
+.navbar-light .navbar-brand{
+    color: rgb(34, 73, 90);
+} 
+.navbar-light .navbar-nav .nav-link.active{
+    color: rgb(34, 73, 90);
+    font-weight: bolder;
+}
+.nav-item{
+    transition: all 0.5s ease;
+}
+.nav-item:hover{
+        border-radius: 20px;
+        background-color:rgba(219, 193, 177, 0.795);
+}
+body{
+    color: rgb(34, 73, 90);
+}
+#inicio{
+    margin-right: 0;
+    overflow: hidden;
+}
+a:link,
+a:visited,
+a:active {
+    text-decoration: none;
+}
+
+/*Boton de Wp*/
+.bntWp{
+    width: fit-content;
+    left: unset;
+}
+.bntWp img{
+    width: 80px;
+    filter: drop-shadow(0 2px 5px rgba(12, 1, 1, 0.87));
+    transition: all 1s ease;
+}
+.bntWp img:hover{
+    width: 83px;
+    filter: drop-shadow(0 2px 5px rgba(255, 255, 255, 0.87));
+    transform: scale(1.2);
+}
+
+/*Nav de Reserva*/
+#navReserva{
+    height: 45px;
+    font-size: bolder;
+    font-size: 1.3rem;
+    z-index: 5;
+    margin-top: 95px;
+}
+#btnNavReservas{
+    background-color:rgb(72, 101, 115);    
+}
+#btnNavReservas a{
+    color: beige;
+    transition: all 0.6s ease;
+}
+#btnNavReservas a:hover{
+    color: rgb(255, 255, 255);
+    filter: drop-shadow(0 2px 5px rgba(255, 255, 255, 0.87)); 
+}
+#divNavSeparador{
+    background-color:rgb(34, 73, 90);
+}
+#divNavRrss{
+    background-color:rgb(219, 193, 177);
+}
+#divNavRrss img{
+    margin-left: 10px;
+    padding: 3px 0px;
+    transition: all 0.6s ease;
+}
+#divNavRrss img:hover{
+    transform: scale(1.3);
+}
+#lgTel{
+    width: 12px;
+}
+#lgFace{
+    width: 10px;
+}
+#lgIg{
+    width: 18px;
+}
+
+/*Generales*/
+.fontCarta{
+    font-family: 'Herr Von Muellerhoff', cursive;
+    font-size: 50px;
+}
+.txtXl{
+    font-size: 2rem;
+    font-family: 'Merriweather', serif;
+    line-height: 20pt;
+}
+.txtSm{
+    font-size: 1.1rem;
+    font-family: 'Merriweather', serif;
+    line-height: 5pt;
+}
+
+/*Inicio*/
+#imgPpal{
+    margin-top: -15px;
+    z-index: 0;
+}
+#txtCentral{
+    margin-top: 10%;
+}
+
+/*Botones*/
+.boton a{
+    text-decoration: none; 
+    color: inherit;   
+}
+.boton{
+    background-color: rgb(187, 171, 162);
+    width: 140px;
+    color: black;
+    border-radius: 15px;
+    font-size: 1.3rem;
+    margin-top: 20%;
+    margin-left: 10%;
+    cursor: pointer;
+    filter: drop-shadow(0 2px 5px rgba(46, 44, 44, 0.753));
+}
+#btnTratamientos, #btnConoce, #btnGaleria, #submit{
+    transition: all 1s ease;
+}
+.boton:hover{
+    background-color: rgb(34, 73, 90);
+    color: beige;     
+}
+
+/*Seccion 2*/
+#bgSec2{
+    background-color: rgb(247, 227, 215);
+    margin-top: -30px;
+    position: absolute;
+    margin-left: 16%;
+    width: 80%;
+    height: 500px;
+}
+#bgTitNegocio{
+    background-color: rgb(34, 73, 90);
+    margin-top: -3px;
+    height: 100px;
+}
+#divTitNegocio{
+    border-bottom: 2px solid beige;
+    width: 260px;
+}
+#txtTratamientos{
+    margin-top: 15%;
+    line-height: 10pt;
+}
+#imgSec2{
+    margin-top: 20px;
+}
+
+/*Seccion 3*/
+#bgSec3{
+    background-color:rgb(72, 101, 115);
+    height: 850px;
+    overflow: hidden;
+    position: relative;
+    margin-top: 500px;
+}
+#imgFondo3sect{
+    position: absolute;    
+    z-index: 1;
+    margin-top: 40px;
+    margin-left: 50px;
+}
+#imgFondo3sect img{
+    width: 90%;
+}
+#cuadroTxt3sect{
+    background-color: rgb(245, 223, 233);
+    position: absolute;
+    z-index: 4;
+    line-height: 10pt;
+    margin-left: 35%;
+    margin-top: 28%;
+    width: 65%;    
+}
+#cuadroTxt3sect div{
+    padding: 80px 50px;
+    line-height: 40pt;
+}
+
+/*Seccion 4*/
+#txt4Col{
+    border: 1px solid rgb(72, 101, 115); ;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+#txt4Col p{
+    line-height: 1pt;
+    font-size: 0.85rem;
+    margin: 30px 0px;
+}
+#txt4Col .row div{
+    padding: 0px;
+}
+.lnSeparadora{
+    border-right: 3px solid rgb(34, 73, 90);
+}
+
+/*Seccion 5*/
+#txt5{
+    background-image: url(../img/img71a.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 600px;
+    overflow: hidden;
+}
+#txt5 div p{
+    font-size: 3.4rem;
+    line-height: 40pt;
+    margin-left: 30px;
+    color: beige;
+    font-style: italic;
+    font-family: 'Merriweather', serif;
+    letter-spacing: 4pt;
+}
+#divtxt5{
+    padding: 12% 10%;
+}
+#txt5 .boton{
+    margin-top: 15%;
+    margin-left: 10%;
+    text-align: center;
+}
+
+/*SECCION CONTACTO*/
+#cntContacto{
+    background-color: rgb(34, 73, 90);
+    background-size: 100%;
+    margin-top: 50px;
+    color: beige;
+    overflow: hidden;
+}
+input::placeholder,
+textarea::placeholder {
+    color: rgba(175, 159, 159, 0.966);
+    font-size: 1rem;
+    font-style: italic;
+}
+label {
+    display: block;
+    margin-top: 20px;
+    letter-spacing: 1px;
+    font-weight: bolder;
+}
+input,
+textarea {
+    width: 380px;
+    height: 15px;
+    padding: 10px;
+    margin-top: 5px;
+    font-size: 1rem;
+    color: beige;
+    border-style: none ;
+    background-color: rgb(34, 73, 90) ;
+    border-bottom: 3px solid #ffffff ;
+}
+textarea {
+    height: 100px;
+}
+#submit {
+    display: block;
+    width: 85px;
+    height: 35px;
+    border: none;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bolder;
+    border-radius: 20px;
+    background-color: rgb(219, 193, 177);
+    color: black;
+    filter: drop-shadow(0 2px 5px rgba(255, 255, 255, 0.753));
+    padding: 0px;
+}
+#submit:hover {
+    background-color:rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+}
+#nameNegocioFinal{
+    border-bottom: 2px solid beige;
+    padding: unset!important;
+    margin-top: 50px;
+}
+#nameNegocioFinal div{
+    font-size: 4.5rem;
+}
+/*Footer*/
+footer{
+    border: 1px solid black;
+    line-height: 10pt;
+    padding: 10px;
+    box-sizing: border-box;
+}
+#icoRrssCto img{
+    margin-left: 10px;
+    padding: 3px 0px;
+    transition: all 0.6s ease;
+}
+#icoRrssCto img:hover{
+    filter: drop-shadow(0 2px 5px rgba(255, 255, 255, 0.719));
+    transform: scale(1.3);
+}
+#logoFooter{
+    width: 100px;
+}
+#ftCel{
+    display: none;
+}
+
+/*PARTE RESPONSIVE*/
+@media only screen and (max-width: 992px){
+    /*Seccion 1*/
+    .fixed-top{
+        all: unset;
+    }
+    #navReserva{
+        position: fixed;
+        width: 100%;
+        height: unset;
+        margin-top: 106px;
+    }
+    #btnTratamientos{
+        margin-left: 15%;
+        margin-top: 10%;
+        margin-bottom: 5%;
+    }
+    #btnConoce{
+        margin-left: 15%;
+        margin-top: 10%;
+        margin-bottom: 5%;
+    }
+    /*Seccion 2*/
+    #bgSec2{
+        margin-top: 10px;
+        margin-left: 16%;
+        height: 500px;
+    }
+    #bgTitNegocio{
+        margin-top: 0px;
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #txtTratamientos{
+        margin-top: 15%;
+        line-height: 10pt;
+    }
+    #imgSec2{
+        display: none;
+    }
+    /*Seccion 3*/
+    #nosotros{
+        justify-content: center!important;
+    }
+    #bgSec3{
+        margin-top: 550px;
+        height: 620px;
+    }
+    #imgFondo3sect{
+        display: none;
+    }
+    #imgFondo3sect img{
+        width: 60%;
+        margin-left: -35%;
+    }
+    #cuadroTxt3sect{
+        width: 85%;
+        margin-left: 0;
+        margin-top: 5%;
+    }
+    /*Seccion 4*/
+    #txt4Col{
+        border: 1px solid rgb(72, 101, 115); ;
+        margin-top: 40px;
+        margin-bottom: 30px;
+    }    
+    #txt4Col p{
+        line-height: 1pt;
+        font-size: 1rem;
+        margin: 30px 0px;
+    }
+    #txt4Col .row div{
+        padding: 0px;
+    }
+    .lnSeparadora{
+        border-right: unset;
+        border-bottom: 3px solid rgb(34, 73, 90);
+    }
+    /*Seccion 5*/
+    #txt5{
+        background-image: url(../img/img71a.jpg);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        height: 600px;
+    }
+    #txt5 div p{
+        font-size: 2.5rem;
+        line-height: 40pt;
+        margin-left: 30px;
+        color: beige;
+        font-style: italic;
+        font-family: 'Merriweather', serif;
+        letter-spacing: 4pt;    
+    }
+    #divtxt5{
+        padding: 15% 5%;
+    }
+    #txt5 .boton{
+        margin-top: 12%;
+        margin-left: 10%;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    #bgSec3 {
+        height: 500px;
+    }
+    #cuadroTxt3sect{
+        margin-left: 1%;
+        font-size: .95rem;
+    }    
+    #cuadroTxt3sect div {
+        padding: 30px;
+        line-height: 40pt;
+    }
+    #txt5{
+        height: 400px;
+    }
+    #txt5 div p{
+        font-size: 1.9rem;
+        line-height: 40pt;
+        margin-left: -14px;
+        margin-top: -1%;
+        letter-spacing: 1pt;    
+    }
+    #divtxt5{
+        padding: 15% 15%;
+    }
+    #txt5 .boton{
+        margin-top: 15%;
+        margin-left: 10%;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 576px){
+    #inicio{
+        padding: 0px;
+        width: 100%;
+    }
+    #navReserva{
+        margin-top: 103px;
+        margin-right: 0px;
+        margin-left: 0px;
+    }
+    #imgPpal{
+        width: 80%;
+        margin-top: 43%;
+    }
+    .txtXl {
+        font-size: 1.7rem;
+        line-height: 15pt;
+    }
+    #bgSec2{
+        width: 100%;
+        margin-left: 0;
+    }
+    #divTitNegocio {
+        width: 210px;
+    }
+    #bgTitNegocio{
+        width: 80%;
+    }
+    #btnConoce{
+        margin-top: 30%;        
+    }
+    #bgSec3 {
+        height: 600px;
+    }
+    #cuadroTxt3sect{
+        margin-left: 0%;
+        font-size: 1rem;
+    } 
+    #cuadroTxt3sect div {
+        line-height: 29pt;
+        padding: 20px;
+    }
+    #txt5 {
+        height: 275px;
+    }
+    #txt5 div p{
+        font-size: 1.3rem;
+        line-height: 17pt;
+        margin-left: -16px;
+        margin-top: 0%;
+        letter-spacing: 0pt;    
+    }
+    input,
+    textarea {
+    width: 100%;
+    }
+    #nameNegocioFinal div {
+        font-size: 3rem;
+    }
+    .fontCarta {
+        font-size: 40px;
+    }
+    #bntWp img{
+        width: 60px;
+    }
+    #btnTratamientos {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #btnConoce {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #btnGaleria {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    footer span{
+        margin-top: 5px;
+        display: block;
+        color: rgb(145, 156, 156);
+    }
+    #ftCel{
+        display: block;
+        padding: 10px 0;
+    }
+    #ftPc{
+        display: none; 
+    }
+}

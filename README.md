@@ -33,6 +33,7 @@ Contiene 4 endpoints
 * Javascript
 * Node.js
 * Express
+* Handlebars
 * MongoDb
 * Bootstrap
 

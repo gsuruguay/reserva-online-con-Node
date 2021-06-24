@@ -16,6 +16,7 @@ function calendario() {
   escribirCalendario(fecha, nombreDias, diacomienzo, dias);
 }
 
+
 function mesFecha(mes) {
   switch (mes) {
     case 0:
@@ -82,33 +83,31 @@ function escribirCalendario(fecha, nombreDias, diaComienzo, dias) {
       diaComienzo--;
     } else if (i > 7 && diaComienzo == 0 && contador <= dias) {
 
-
       tds[i].innerHTML = contador;
 
       /**Agrego clase css a cada td */
       tds[i].classList.add("tdHover");
 
       /*Funcion click para seleccionar dia de reserva*/
-      tds[i].addEventListener("click", function(){
+      tds[i].addEventListener("click", function () {
         const mesSeleccionado = document.getElementById("fechaActual").innerHTML;
         let mesEnNro;
-        let anioSolo = mesSeleccionado.slice(mesSeleccionado.lastIndexOf(" ")+1);
+        let anioSolo = mesSeleccionado.slice(mesSeleccionado.lastIndexOf(" ") + 1);
         let fechaFormateada;
-        const diaSeleccionado = i-8;
-        const mesesDelAnio = ["inicial","Enero","Febrero","Marzo", "Abril", "Mayo", "Junio", "Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"];
-        for(let i=0; i<= mesesDelAnio.length; i++){
-          if(mesSeleccionado.slice(0, mesSeleccionado.indexOf(" ")) === mesesDelAnio[i]){
-            mesEnNro = (i < 10)?"0"+i:i;
+        const diaSeleccionado = i - 8;
+        const mesesDelAnio = ["inicial", "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
+        for (let i = 0; i <= mesesDelAnio.length; i++) {
+          if (mesSeleccionado.slice(0, mesSeleccionado.indexOf(" ")) === mesesDelAnio[i]) {
+            mesEnNro = (i < 10) ? "0" + i : i;
           }
         }
         fechaFormateada = diaSeleccionado + "-" + mesEnNro + "-" + anioSolo;
 
         if (diaSeleccionado < fecha.getDate()) {
-          alert("No puedes seleccionar un dia anterior a la fecha actual");          
-        } else {          
+          alert("No puedes seleccionar un dia anterior a la fecha actual");
+        } else {
           window.location.href = "/buscarReserva?fecha=" + fechaFormateada;
         }
-
       })
 
       /** Estilo al dia actual de color rojo*/

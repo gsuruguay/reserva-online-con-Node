@@ -1,6 +1,7 @@
+require("dotenv").config();
 module.exports = {
-    url: "mongodb://localhost:27017",
-    db: "dbReservasTurno",
-    coleccion: "reservas"
+    url: process.env.DB_URL,
+    db: process.env.DB_NOMBRE,
+    coleccion: process.env.DB_COLECCION
   };
   

@@ -1,17 +1,5 @@
 <h3 class="text-center">Completa tus datos para la reserva</h3>
-<!-- Otro estlilo de form con label flotante
-<form class="needs-validation" novalidate>
-  <div class="form-floating mb-3">
-    <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-    <label for="floatingInput">Dirección de email</label>
-  </div>
-  <div class="form-floating">
-    <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-    <label for="floatingPassword">Password</label>
-  </div>
-  <input type="submit" class="btn btn-primary">
-</form>
- -->
+
 <div class="container">
   <form method="POST" action="/confirmacionReserva" class="row g-3 needs-validation" novalidate>
     <div class="col-md-6">
@@ -77,26 +65,6 @@
   </form>
 </div>
 
-<!--
-<script>
-var oldURL = `http://localhost:3456/datosReserva?fecha={{fecha}}&hora={{hora}}`;
-console.log(oldURL)
-var currentURL = window.location.href;
-function checkURLchange(currentURL){
-    if(currentURL != oldURL){
-        alert("url changed!");
-        oldURL = currentURL;
-    }
-
-    oldURL = window.location.href;
-    setInterval(function() {
-        checkURLchange(window.location.href);
-    }, 2000);
-}
-
-checkURLchange();
-</script>
--->
 <script>
   (function () {
     'use strict'
@@ -117,6 +85,4 @@ checkURLchange();
         }, false)
       })
   })()
-
-
 </script>

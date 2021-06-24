@@ -42,6 +42,9 @@ a{
   background-color: rgba(89, 116, 129, 0.726);
   cursor: pointer;
 }
+.tdSelect{
+  background-color: rgba(218, 255, 6, 0.726);
+}
 
 /*Seccion Horarios disponibles*/
 #horaDisponibles th, td {

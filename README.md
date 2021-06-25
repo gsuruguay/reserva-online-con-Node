@@ -37,4 +37,6 @@ Contiene 4 endpoints
 * MongoDb
 * Bootstrap
 
+## El proyecto está en heroku para su prueba en:
+* https://app-reservas-online.herokuapp.com/
 

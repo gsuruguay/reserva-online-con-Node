@@ -21,12 +21,6 @@ Contiene 4 endpoints
 * POST "/datosReserva": Una vez seleccionado un horario disponible se muestra un formulario para poder completar con datos personales.
 * POST "/confirmacionReserva": Muestra los datos colocados en el formulario. Guarda esos datos en la DB, y se envía por email con el formulario lleno y la reserva efectuada.
 
-
-## Instalación
-* Clonar el proyecto con **git clone https://github.com/gsuruguay/reserva-online-con-Node.git**
-* Ejecutar por consola desde la carpeta raiz del proyecto **npm install** para instalar las dependencias usadas (express, handlebars, nodemailer).
-* Se accede por **http://localhost:3456/**
-
 ## Skills usados
 * Html
 * Css
@@ -36,6 +30,12 @@ Contiene 4 endpoints
 * Handlebars
 * MongoDb
 * Bootstrap
+
+## Instalación
+* Clonar el proyecto con **git clone https://github.com/gsuruguay/reserva-online-con-Node.git**
+* Ejecutar por consola desde la carpeta raiz del proyecto **npm install** para instalar las dependencias usadas (express, handlebars, nodemailer).
+* Ejecutar en consola **npm start**
+* Se accede por **http://localhost:3456/**
 
 ## El proyecto está en heroku para su prueba en:
 * https://app-reservas-online.herokuapp.com/
